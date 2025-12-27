@@ -1,0 +1,22 @@
+import time
+import pyautogui
+import webbrowser
+contacts = str(input('enter contact name : '))
+message = str(input("enter message : "))
+print('opening whatsapp')
+time.sleep(2)
+webbrowser.open('https://web.whatsapp.com/')
+time.sleep(10)
+x1 , y1 = (189, 158)
+pyautogui.moveTo(x1,y1)
+time.sleep(0.5)
+pyautogui.click()
+pyautogui.typewrite(contacts)
+pyautogui.press('enter')
+time.sleep(1)
+x2, y2 = (759, 842)
+pyautogui.moveTo(x2, y2)
+time.sleep(0.5)
+pyautogui.click()
+pyautogui.typewrite(message)
+pyautogui.press('enter')
